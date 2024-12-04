@@ -4,18 +4,18 @@ import { defineAsyncComponent } from 'vue';
 
 // Асинхронная загрузка компонентов
 const EstatesPage = defineAsyncComponent(
-  () => import('../pages/EstatesPage.vue')
+  () => import('../pages/EstatesPage/EstatesPage.vue')
 );
 
 const routes = [
   {
-    path: '/', // Страница со списком объектов
-    component: EstatesPage, // Используем тот же компонент для отображения
+    path: '/',
+    component: EstatesPage,
     name: 'Home',
   },
   {
-    path: '/estates', // Страница со списком объектов
-    component: EstatesPage, // Используем тот же компонент для отображения
+    path: '/estates',
+    component: EstatesPage,
     name: 'EstatesPageRoute',
   },
 ];
@@ -26,4 +26,3 @@ const router = createRouter({
 });
 
 export default router;
-
